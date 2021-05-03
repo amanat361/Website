@@ -1,0 +1,16 @@
+{
+"companyName": "SaminAmanat",
+"productName": "Bloccs",
+"productVersion": "0.1",
+"dataUrl": "v0.3.data.unityweb",
+"wasmCodeUrl": "v0.3.wasm.code.unityweb",
+"wasmFrameworkUrl": "v0.3.wasm.framework.unityweb",
+"graphicsAPI": ["WebGL 2.0","WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#800F17",
+"cacheControl": {"default": "must-revalidate"},
+"developmentBuild": false,
+"multithreading": false,
+"unityVersion": "2019.3.7f1"
+}
