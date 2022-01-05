@@ -1,13 +1,14 @@
+const el = document.getElementById('motion');
+
 function askPermission() {
   // feature detect
-  console.log('1')
+  el.innerText = "i hate my life"
   if (typeof DeviceOrientationEvent.requestPermission === "function") {
     DeviceOrientationEvent.requestPermission()
       .then(permissionState => {
         if (permissionState === "granted") {
-          console.log('2')
+          el.innerText = "meep moop"
           window.addEventListener('devicemotion', (event) => {
-              const el = document.getElementById('motion');
               el.innerText = (Math.round((event.acceleration.x + Number.EPSILON) * 100) / 100) + ' m/s2';
           });
         }
@@ -15,8 +16,7 @@ function askPermission() {
       .catch(console.error);
   } else {
     window.addEventListener('devicemotion', (event) => {
-        console.log('3')
-        const el = document.getElementById('motion');
+        el.innerText = "i hate this website"
         el.innerText = (Math.round((event.acceleration.x + Number.EPSILON) * 100) / 100) + ' m/s2';
     });
   }
