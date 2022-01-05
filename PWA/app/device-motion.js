@@ -1,4 +1,9 @@
 const rotation = document.getElementById('rotation');
+const message = document.getElementById('message');
+
+function handleOrientationFallback(event) {
+  message.innerText = "it works";
+}
 
 function handleOrientation(event) {
   var alpha    = event.alpha;
@@ -8,3 +13,4 @@ function handleOrientation(event) {
 }
 
 window.addEventListener("deviceorientation", handleOrientation, true);
+window.addEventListener("AbsoluteOrientationSensor", handleOrientationFallback, true)
